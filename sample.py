@@ -1,0 +1,6 @@
+AWS_ACCESS_KEY = "AKIA0000000000XAMPLE"
+AWS_SECRET_KEY = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxXAMPLEKEY"
+GITHUB_TOKEN = "ghp_XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+
+def sample():
+    print("Hello, World!")

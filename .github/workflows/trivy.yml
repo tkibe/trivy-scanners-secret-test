@@ -1,0 +1,21 @@
+name: Trivy Secrets Scan
+
+on:
+  push:
+    branches-ignore: []
+
+jobs:
+  trivy-secrets-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Run Trivy Secret Scan
+        uses: aquasecurity/trivy-action@0.28.0
+        with:
+          scan-type: 'fs'
+          scan-ref: '.'
+          scanners: "secret"
+          exit-code: '1'
+          severity: 'CRITICAL,HIGH'
